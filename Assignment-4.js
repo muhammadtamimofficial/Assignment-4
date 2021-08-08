@@ -32,3 +32,29 @@ if (0 < total) {
 /* ---------------------------
     Seer to mon converter end.
    --------------------------- */
+
+
+/* problem 2 */
+/* --------------------
+     totalSales start
+   --------------------*/
+
+/* This is product info */
+let cart = [
+    { name: 'shirt', price: 100, quantity: 5 },
+    { name: 'pant', price: 200, quantity: 3 },
+    { name: 'shoe', price: 200, quantity: 2 }
+]
+function totalSales(number) {
+    let cartTotal = 0;
+    for (let product of cart) {
+        const totalProduct = product.price * product.quantity;
+        cartTotal = cartTotal + totalProduct;
+    } return cartTotal;
+}
+let totalprice = totalSales();
+console.log(totalprice);
+
+/* --------------------
+      totalSales end
+   --------------------*/
