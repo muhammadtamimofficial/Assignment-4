@@ -1,39 +1,19 @@
-
-function perfectFriend(myFriends) {
-    for (let friend of myFriends) {
-        if (typeof friend !== "string") {
-            return "Please give me string"
+let cart = [
+    { name: 'shirt', price: 100, quantity: 5 },
+    { name: 'pant', price: 200, quantity: 3 },
+    { name: 'shoe', price: 200, quantity: 2 }
+]
+function totalSales(cart) {
+    let cartTotal = 0;
+    for (let product of cart) {
+        if (typeof product.quantity !== 'number') {
+            return "Please give me number"
         }
     }
-
-    for (let friend of myFriends) {
-        if (friend.length == 5) {
-            return friend;
-        }
-
-    }
+    for (let product of cart) {
+        const totalProduct = product.price * product.quantity;
+        cartTotal = cartTotal + totalProduct;
+    } return cartTotal;
 }
-let myFriends = ["Jon", 'Tamim', "Mojdalif", "Mark", "Kasim"]
-let lergestFriend = perfectFriend(myFriends)
-console.log(lergestFriend);
-
-
-
-
-
-
-
-// function perfectFriend(number) {
-//     for (let friend of myFriends) {
-//         if (typeof item !== "string") {
-//             let total = "give me a string"
-//         }
-//         if (friend.length == 5) {
-//             return friend;
-//         }
-
-//     }
-// }
-// let myFriends = [4, 65, 65, 564, 54]
-// let lergestFriend = perfectFriend(myFriends)
-// console.log(lergestFriend);
+let totalprice = totalSales(cart);
+console.log(totalprice);
