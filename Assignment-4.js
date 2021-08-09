@@ -131,7 +131,13 @@ console.log(totalCost);
    ----------------------------------*/
 
 
-function perfectFriend(number) {
+function perfectFriend(myFriends) {
+    for (let friend of myFriends) {
+        if (typeof friend !== "string") {
+            return "Please give me string"
+        }
+    }
+
     for (let friend of myFriends) {
         if (friend.length == 5) {
             return friend;
@@ -142,6 +148,7 @@ function perfectFriend(number) {
 let myFriends = ["Jon", 'Tamim', "Mojdalif", "Mark", "Kasim"]
 let lergestFriend = perfectFriend(myFriends)
 console.log(lergestFriend);
+
 
 /* ----------------------------------
        Find five letter  name end
