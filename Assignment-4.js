@@ -6,7 +6,8 @@
 function seerToMon(number) {
     /* If input is string */
     if (typeof number == 'string') {
-        console.log("Please, Give me number");
+        let total = "Please, Give me number";
+        return total;
     }
     /* If input is positive number */
     else if (0 < number) {
@@ -16,18 +17,17 @@ function seerToMon(number) {
     }
     /* If input is negative number */
     else if (0 > number !== -0) {
-        console.log("Sorry, your number is not valid give me positive number");
+        let total = "Sorry, your number is not valid give me positive number";
+        return total;
     }
     /* If have a some problem */
     else {
-        console.log("Please, Try try again");
+        console.log("Please, Try again");
     }
 }
 /* This is input variable */
-let total = seerToMon(40);
-if (0 < total) {
-    console.log(total);
-}
+let total = seerToMon(80);
+console.log(total);
 
 /* ---------------------------
     Seer to mon converter end.
